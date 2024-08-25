@@ -42,7 +42,10 @@ function App() {
       setIsValidJson(true);
 
       // Call the API with the parsed JSON input
-      const res = await axios.post("http://127.0.0.1:8080/bfhl", parsedData);
+      const res = await axios.post(
+        "https://bfhl-bajaj-task.onrender.com/bfhl",
+        parsedData
+      );
 
       setResponse(res.data);
       setShowDropdown(true);
